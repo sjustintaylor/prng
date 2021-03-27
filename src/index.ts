@@ -57,7 +57,10 @@ export default class PRNG {
    * @param seed the new seed value to use
    */
   public reset(seed: number) {
-    this._seed = seed;
+    this._seed =
+      typeof seed === "number"
+        ? seed
+        : Utilities.textToSeed(JSON.stringify(seed));
   }
   /**
    * Generates a random integer
