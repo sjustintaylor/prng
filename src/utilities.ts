@@ -15,6 +15,19 @@ export default class Utilities {
     hash.update(text);
     return parseInt(hash.digest("hex"), 16);
   }
+
+  /**
+   * Converts a floating point number to an integer by moving the decimal place to the right.
+   * @param number the number to convert
+   * @returns {Number} an integer
+   */
+  public static toInteger(number: number): number {
+    const value = String(number).split(".");
+    if (value.length > 1) {
+      return parseInt(`${value[0]}${value[1]}`);
+    }
+    return number;
+  }
   /**
    * Checks value type and throws an error if invalid
    * @param value the value to check

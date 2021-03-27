@@ -29,7 +29,7 @@ export default class PRNG {
     Utilities.checkValueType(increment, "number", "increment");
     this._seed =
       typeof seed === "number"
-        ? seed
+        ? Utilities.toInteger(seed)
         : Utilities.textToSeed(JSON.stringify(seed));
     this._modulus = modulus;
     this._multiplier = multiplier;
@@ -81,16 +81,17 @@ export default class PRNG {
    * @returns a random float between floor and ceiling
    */
   public randomFloat(
-    floor: number = 0,
-    ceiling: number = Number.MAX_SAFE_INTEGER,
+    // floor: number = 0,
+    // ceiling: number = Number.MAX_SAFE_INTEGER,
     decimalPlaces: number = 2
   ): number {
-    Utilities.checkValueType(floor, "number", "floor");
-    Utilities.checkValueType(ceiling, "number", "ceiling");
+    // Utilities.checkValueType(floor, "number", "floor");
+    // Utilities.checkValueType(ceiling, "number", "ceiling");
     Utilities.checkValueBounds(decimalPlaces, 20, 1, "decimalPlaces");
-    return Number(
-      (this._generate() * (ceiling - floor + 1) + floor).toFixed(decimalPlaces)
-    );
+    return Number(this._generate().toFixed(decimalPlaces));
+    // return Number(
+    //   (this._generate() * (ceiling - floor + 1) + floor).toFixed(decimalPlaces)
+    // );
   }
 
   /**

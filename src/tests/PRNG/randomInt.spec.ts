@@ -1,7 +1,7 @@
-import PRNG from "../index";
-import { generateEmptyArray } from "./utilities";
+import PRNG from "../../index";
+import { generateEmptyArray } from "../utilities";
 
-const prng = new PRNG(123456789);
+const prng = new PRNG(1234567890);
 const ceiling = 1000;
 const floor = 100;
 const elementCount = 100000;
