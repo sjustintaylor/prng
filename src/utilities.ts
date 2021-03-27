@@ -22,7 +22,7 @@ export default class Utilities {
    * @returns {Number} an integer
    */
   public static toInteger(number: number): number {
-    const value = String(number).split(".");
+    const value = number.toString().split(".");
     if (value.length > 1) {
       return parseInt(`${value[0]}${value[1]}`);
     }
