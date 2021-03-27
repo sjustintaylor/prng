@@ -1,8 +1,10 @@
 {
-  "name": "prng",
-  "version": "0.1.0",
+  "name": "lcg-prng",
+  "version": "0.1.1",
   "description": "An LCG based PRNG for game dev. Not cryptographically secure.",
   "main": "./dist/index.js",
+  "declaration": true,
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest"
