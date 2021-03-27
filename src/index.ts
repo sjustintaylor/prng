@@ -93,6 +93,10 @@ export default class PRNG {
     );
   }
 
+  /**
+   * Generates a new random number and updates the seed value
+   * @returns a random number between 0 and 1 exclusive
+   */
   private _generate(): number {
     this._seed =
       (this._multiplier * this._seed + this._increment) % this._modulus;
