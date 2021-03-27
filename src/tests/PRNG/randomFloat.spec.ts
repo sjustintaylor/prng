@@ -2,15 +2,14 @@ import PRNG from "../../index";
 import { generateEmptyArray } from "../utilities";
 
 const prng = new PRNG(1234567890);
-const ceiling = 1;
+const ceiling = 10;
 const floor = 0;
 const elementCount = 1000;
 const decimalPlaces = 5;
 it("should return a float within the bounds", () => {
   let values = generateEmptyArray(elementCount).map((el) =>
-    prng.randomFloat(decimalPlaces)
+    prng.randomFloat(decimalPlaces, floor, ceiling)
   );
-
   expect(values.some((el) => el > ceiling)).toBe(false);
   expect(values.some((el) => el < floor)).toBe(false);
 });
