@@ -1,0 +1,22 @@
+{
+  "name": "prng",
+  "version": "0.1.0",
+  "description": "An LCG based PRNG for game dev. Not cryptographically secure.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjustintaylor/prng.git"
+  },
+  "author": "Justin Taylor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sjustintaylor/prng/issues"
+  },
+  "homepage": "https://github.com/sjustintaylor/prng#readme",
+  "dependencies": {
+    "jest": "^26.6.3"
+  }
+}
