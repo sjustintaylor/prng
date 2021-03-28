@@ -1,6 +1,6 @@
 {
   "name": "lcg-prng",
-  "version": "0.1.1",
+  "version": "0.1.6",
   "description": "An LCG based PRNG for game dev. Not cryptographically secure.",
   "main": "./dist/index.js",
   "declaration": true,

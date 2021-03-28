@@ -4,7 +4,7 @@ import Utilities from "./utilities";
 /**
  * A seedable pseudo random number generator
  */
-export default class PRNG {
+export class PRNG {
   private _seed: number;
   private _modulus: number;
   private _multiplier: number;
@@ -46,7 +46,7 @@ export default class PRNG {
    * Restores a saved state for continued use
    * @param state the state to be restored
    */
-  public restoreState(state: number) {
+  public restoreState(state: number): void {
     this._seed =
       typeof state === "number"
         ? state
@@ -56,7 +56,7 @@ export default class PRNG {
    * Reseeds the number generator
    * @param seed the new seed value to use
    */
-  public reset(seed: number) {
+  public reset(seed: number): void {
     this._seed =
       typeof seed === "number"
         ? seed
