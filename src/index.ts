@@ -29,7 +29,7 @@ export class PRNG {
     Utilities.checkValueType(increment, "number", "increment");
     this._seed =
       typeof seed === "number"
-        ? Utilities.toInteger(seed)
+        ? Utilities.textToSeed(Utilities.toInteger(seed).toString())
         : Utilities.textToSeed(JSON.stringify(seed));
     this._modulus = modulus;
     this._multiplier = multiplier;
@@ -49,17 +49,17 @@ export class PRNG {
   public restoreState(state: number): void {
     this._seed =
       typeof state === "number"
-        ? state
+        ? Utilities.textToSeed(Utilities.toInteger(state).toString())
         : Utilities.textToSeed(JSON.stringify(state));
   }
   /**
    * Reseeds the number generator
    * @param seed the new seed value to use
    */
-  public reset(seed: number): void {
+  public reset(seed: any): void {
     this._seed =
       typeof seed === "number"
-        ? seed
+        ? Utilities.textToSeed(Utilities.toInteger(seed).toString())
         : Utilities.textToSeed(JSON.stringify(seed));
   }
   /**
