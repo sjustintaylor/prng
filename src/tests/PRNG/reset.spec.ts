@@ -1,4 +1,4 @@
-import PRNG from "../../index";
+import { PRNG } from "../../index";
 
 const seed = 1234567890;
 const prng = new PRNG(seed);

@@ -1,4 +1,4 @@
-import PRNG from "../../index";
+import { PRNG } from "../../index";
 import { generateEmptyArray } from "../utilities";
 
 const prng = new PRNG(1234567890);
